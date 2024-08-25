@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    width: 180px;
+    margin-bottom: 80px;
+}
+
+/* BODY CREATE TRIAL ACCOUNT CSS */
+
+.main-verify-email {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100vh;
+}
+
+.main-verify-email-first {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 12px;
+}
+
+.main-verify-email-first h2 {
+    font-weight: 600;
+    color: #000;
+    font-size: 28px;
+}
+
+.main-verify-email-ptag {
+    font-weight: 400;
+    color: #6C6D6D;
+    font-size: 18px;
+}
+
+.main-verify-email-continuewith {
+    color: #6C6D6D;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.main-verify-email-social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 40%;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.main-verify-email-social-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8px 20px;
+    border: 1px solid #333;
+    border-radius: 12px;
+    width: 30%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.main-verify-email-social-inner:hover {
+    background: #ececec;
+}
+
+.main-verify-email-social-inner img {
+    width: 35px;
+    height: 35px;
+}
+
+.main-verify-email-trouble {
+    color: #6C6D6D;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.main-verify-email-trouble a {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.main-verify-email-alreadymember {
+    color: #6C6D6D;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main-verify-email-alreadymember a {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width:1280px) {
+    .main-verify-email-social{
+        width: 60%;
+    }
+}
+
+@media (max-width:1024px) {
+    .main-verify-email-social{
+        width: 75%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-verify-email-first {
+        padding: 30px;
+    }
+
+    .main-verify-email {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-verify-email-first h2 {
+        font-size: 22px;
+    }
+
+    .main-verify-email-ptag {
+        font-size: 14px;
+    }
+
+    .main-verify-email-social {
+        width: 100%;
+    }
+
+    .main-verify-email-social-inner img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .main-verify-email-trouble {
+        font-size: 14px;
+    }
+
+    .main-verify-email-trouble a{
+        font-size: 14px;
+    }
+
+    .main-verify-email-alreadymember {
+        font-size: 14px;
+    }
+
+    .main-verify-email-alreadymember a{
+        font-size: 14px;
+    }
+
+    .logo {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .main-verify-email-first {
+        padding: 15px;
+    }
+}

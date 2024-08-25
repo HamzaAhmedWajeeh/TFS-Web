@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icons Import -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Connect With CSS File -->
+    <link rel="stylesheet" href="../yourNeeds/yourNeeds.css" />
+
+    <title>TFS Website</title>
+</head>
+
+<body>
+    <main>
+        <div class="main-verify-email">
+            <img src="../assets/images/logo.png" alt="Logo" class="logo">
+            <h2>Tell us what you are looking for:</h2>
+
+                <div class="checkbox-group">
+                    <div class="checkbox-group-inner">
+                        <input type="checkbox" id="option1" name="option" class="custom-checkbox">
+                        <label for="option1">Discovering new markets & business opportunities</label>
+                    </div>
+
+                    <div class="checkbox-group-inner">
+                        <input type="checkbox" id="option2" name="option" class="custom-checkbox">
+                        <label for="option2">Accessing trade financing</label>
+                    </div>
+
+                    <div class="checkbox-group-inner">
+                        <input type="checkbox" id="option3" name="option" class="custom-checkbox">
+                        <label for="option3">Promoting my products globally</label>
+                    </div>
+
+                    <div class="checkbox-group-inner">
+                        <input type="checkbox" id="option4" name="option" class="custom-checkbox">
+                        <label for="option4">Connecting with right buyers/sellers for my products/services</label>
+                    </div>
+                </div>
+
+                <div class="selection-ptag">
+                    <p>This selection makes it easier for us to optimise platform experience for you.</p>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="skipButton">Skip for Now</button>
+                    <button id="continueButton" disabled>Continue</button>
+                </div>
+        </div>
+    </main>
+
+    <script>
+        // Radio Buttons
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const continueButton = document.getElementById('continueButton');
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function () {
+                    let isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+                    continueButton.disabled = !isChecked;
+                });
+            });
+        });                
+    </script>
+</body>
+
+</html>

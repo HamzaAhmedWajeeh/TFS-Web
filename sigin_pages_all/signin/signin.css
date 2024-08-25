@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    width: 180px;
+    /* margin-bottom: 15px; */
+}
+
+/* BODY SIGNIN CSS */
+
+main {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    /* background: #fff; */
+    width: 50%;
+    padding: 30px 60px;
+    border-radius: 10px;
+    gap: 15px;
+    /* height: 100vh; */
+}
+
+.main-secondsection-signin {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main-secondsection-inner-signin {
+    width: 100%;
+    height: 100%;
+}
+
+.main-secondsection-signin img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-signin h2 {
+    font-weight: 600;
+    color: #000;
+    font-size: 28px;
+}
+
+.main-signin-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 8px;
+    width: 85%;
+}
+
+.main-signin-email p {
+    font-weight: 400;
+    color: #6C6D6D;
+    font-size: 18px;
+}
+
+.main-signin-email input {
+    font-weight: 400;
+    color: #000;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #000;
+    padding: 16px 14px;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-signin-email input:hover {
+    border: 1px solid #5DBDF9;
+}
+
+.main-signin-email input:focus {
+    border: 1px solid #078de0;
+}
+
+.main-signin-password {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 8px;
+    width: 85%;
+}
+
+.main-signin-password p {
+    font-weight: 400;
+    color: #6C6D6D;
+    font-size: 18px;
+}
+
+.main-signin-password input {
+    font-weight: 400;
+    color: #000;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #000;
+    padding: 16px 14px;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-signin-password input:hover {
+    border: 1px solid #5DBDF9;
+}
+
+.main-signin-password input:focus {
+    border: 1px solid #078de0;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.main-signin-forgotpass {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+}
+
+.main-signin-forgotpass-first input,
+.main-signin-forgotpass-first label {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.main-signin-forgotpass-second {
+    color: #5DBDF9;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+.main-signin-forgotpass-second:hover {
+    color: #078de0;
+}
+
+.main-signin-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px;
+    background: #5DBDF9;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 85%;
+}
+
+.main-signin-button:hover {
+    background: #078de0;
+    transform: translateY(-2px);
+}
+
+.main-signin-continuewith {
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.main-signin-oruseemail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+}
+
+.main-signin-oruseemail-line {
+    border: 1px solid #dadada;
+    width: 100%;
+}
+
+.main-signin-oruseemail-ptag {
+    color: #6C6D6D;
+    font-size: 14px;
+    width: 40%;
+    font-weight: 600;
+    text-align: center;
+}
+
+.main-signin-social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 85%;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.main-signin-social-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8px 20px;
+    border: 1px solid #333;
+    border-radius: 12px;
+    width: 30%;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-signin-social-inner:hover {
+    background: #ececec;
+}
+
+.main-signin-social-inner img {
+    width: 35px;
+    height: 35px;
+}
+
+.main-signin-noaccount {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    width: 85%;
+    gap: 8px;
+}
+
+.main-signin-noaccount p {
+    font-weight: 400;
+    color: #6C6D6D;
+    font-size: 16px;
+}
+
+.main-signin-noaccount a {
+    font-weight: 600;
+    color: #000;
+    text-decoration: underline;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1280px) {
+    .main-signin {
+        padding: 18px 25px;
+        width: 60%;
+    }
+
+    .main-secondsection-signin {
+        width: 40%;
+    }
+
+    .main-signin-oruseemail-line {
+        border: 1px solid #dadada;
+        width: 100%;
+    }
+
+    .main-signin-oruseemail-ptag {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-signin {
+        width: 65%;
+    }
+
+    .main-secondsection-signin {
+        width: 0;
+    }
+
+    .main-signin-button {
+        width: 100%;
+    }
+
+    .main-signin-oruseemail {
+        width: 100%;
+    }
+
+    .main-signin-oruseemail-line {
+        width: 100%;
+    }
+
+    .main-signin-oruseemail-ptag {
+        width: 80%;
+    }
+
+    .main-signin-email {
+        width: 100%;
+    }
+
+    .main-signin-password {
+        width: 100%;
+    }
+
+    .main-signin-forgotpass {
+        width: 100%;
+    }
+
+    .main-signin-social {
+        width: 100%;
+    }
+
+    .main-signin-noaccount {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-signin {
+        width: 85%;
+    }
+
+    .main-signin h2 {
+        font-size: 22px;
+    }
+
+    .main-signin-email p {
+        font-size: 14px;
+    }
+
+    .logo {
+        margin-bottom: 30px;
+    }
+
+    .main-signin-email input {
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+
+    .main-signin-password p {
+        font-size: 14px;
+    }
+
+    .main-signin-password input {
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+
+    .main-signin-forgotpass-first {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .main-signin-forgotpass-first input,
+    .main-signin-forgotpass-first label {
+        font-size: 14px;
+    }
+
+    .main-signin-forgotpass-second {
+        font-size: 14px;
+    }
+
+    .main-signin-social-inner {
+        padding: 6px 8px;
+    }
+
+    .main-signin-social-inner img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .main-signin-noaccount p {
+        font-size: 14px;
+    }
+
+    .main-signin-noaccount a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 450px) {
+    .main-signin {
+        width: 100%;
+    }
+
+    .main-signin-button {
+        padding: 6px 30px;
+        font-size: 14px;
+    }
+
+    .main-signin-oruseemail-ptag {
+        width: 100%;
+    }
+
+    .logo {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .main-signin-forgotpass {
+        gap: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .main-signin-noaccount {
+        flex-direction: column;
+        gap: 4px;
+    }
+}

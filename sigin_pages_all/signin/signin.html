@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icons Import -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Connect With CSS File -->
+    <link rel="stylesheet" href="../signin/signin.css" />
+
+    <title>TFS Website</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="main-signin">
+            <img src="../assets/images/logo.png" alt="Logo" class="logo">
+
+            <h2>Sign in to your account</h2>
+
+            <p class="main-signin-continuewith">Sign in with</p>
+
+            <div class="main-signin-social">
+                <div class="main-signin-social-inner">
+                    <img src="../assets/images/googleicon.png" alt="" />
+                </div>
+
+                <div class="main-signin-social-inner">
+                    <img src="../assets/images/facebookicon.png" alt="" />
+                </div>
+
+                <div class="main-signin-social-inner">
+                    <img src="../assets/images/linkedinicon.png" alt="" />
+                </div>
+            </div>
+
+            <div class="main-signin-oruseemail">
+                <div class="main-signin-oruseemail-line"></div>
+                <p class="main-signin-oruseemail-ptag">OR USE EMAIL</p>
+                <div class="main-signin-oruseemail-line"></div>
+            </div>
+
+            <div class="main-signin-email">
+                <p>Email</p>
+                <input type="email" placeholder="dave@company.com" />
+            </div>
+
+            <div class="main-signin-password">
+                <p>Password</p>
+                <div class="password-container">
+                    <input type="password" placeholder="Password" id="password" />
+                    <i class="ri-eye-line" id="togglePassword"></i>
+                </div>
+            </div>
+
+            <div class="main-signin-forgotpass">
+                <div class="main-signin-forgotpass-first">
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox">Remember me</label>
+                </div>
+
+                <div class="main-signin-forgotpass-second">
+                    <p>Forgot Password?</p>
+                </div>
+            </div>
+
+            <button class="main-signin-button">Sign in</button>
+
+            <div class="main-signin-noaccount">
+                <p>Trouble Signing in?</p>
+                <a>Contact us</a>
+            </div>
+
+            <div class="main-signin-noaccount">
+                <p>Don't have an account?</p>
+                <a>Sign up</a>
+            </div>
+
+        </div>
+
+        <div class="main-secondsection-signin">
+            <div class="main-secondsection-inner-signin">
+                <img src="../assets/images/signin_bg.jpg" alt="frame 1">
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Password toggle
+        const togglePassword = document.getElementById('togglePassword');
+        const password = document.getElementById('password');
+
+        togglePassword.addEventListener('click', () => {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            togglePassword.classList.toggle('ri-eye-line');
+            togglePassword.classList.toggle('ri-eye-close-line');
+        });
+    </script>
+</body>
+
+</html>

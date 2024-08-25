@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icons Import -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Connect With CSS File -->
+    <link rel="stylesheet" href="../createTrailAccountDetails/createTrailAccountDetails.css" />
+
+    <title>TFS Website</title>
+</head>
+
+<body>
+    <main>
+        <div class="main-verify-email">
+            <img src="../assets/images/logo.png" alt="Logo" class="logo">
+            <h2>Welcome to Trade Foresight</h2>
+            <p class="main-verify-email-ptag">Add the following information to create your free trial account.</p>
+
+            <div class="main-first-last-name">
+                <div class="main-firstname">
+                    <p>First Name</p>
+                    <input type="text" />
+                </div>
+
+                <div class="main-lastname">
+                    <p>Last Name</p>
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="main-password">
+                <p class="main-password-firstptag">Password</p>
+                <input type="password" />
+                <p class="main-password-secondptag">Your password must contain 8 characters, including one lower case
+                    letter and one number</p>
+            </div>
+
+            <div class="main-business-company">
+                <p>Company / Business Name</p>
+                <input type="text" />
+            </div>
+
+            <div class="main-role">
+                <p>Role</p>
+                <input type="text" />
+            </div>
+
+            <div class="main-get-country-new">
+                <p>Country</p>
+                <div class="country-selector" onclick="toggleDropdown(event)">
+                    <div class="selected-country">
+                        <img src="../assets/images/flag/usflag.png" alt="Country Flag" class="country-flag"
+                            id="selected-flag">
+                        <span class="country-name" id="selected-country-name">US</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                    <div class="dropdown" id="country-dropdown">
+                        <div class="dropdown-item" onclick="selectCountry('../assets/images/flag/usflag.png', 'US')">
+                            <img src="../assets/images/flag/usflag.png" alt="Country Flag" class="country-flag">
+                            <span class="country-name">US</span>
+                        </div>
+                        <div class="dropdown-item"
+                            onclick="selectCountry('../assets/images/flag/canadaflag.png', 'Canada')">
+                            <img src="../assets/images/flag/canadaflag.png" alt="Country Flag" class="country-flag">
+                            <span class="country-name">Canada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-get-phone">
+                <p>Phone Number</p>
+                <div class="phone-selector" onclick="togglePhoneDropdown(event)">
+                    <div class="selected-phone">
+                        <img src="../assets/images/flag/usflag.png" alt="Country Flag" class="country-flag"
+                            id="selected-phone-flag">
+                        <span class="country-code" id="selected-country-code">+1</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                    <input type="text" id="phone-number-input" placeholder="Enter phone number">
+                    <div class="dropdown" id="phone-dropdown">
+                        <div class="dropdown-item" onclick="selectPhone('+1', '../assets/images/flag/usflag.png')">
+                            <img src="../assets/images/flag/usflag.png" alt="Country Flag" class="country-flag">
+                            <span class="country-code">+1</span>
+                        </div>
+                        <div class="dropdown-item" onclick="selectPhone('+1', '../assets/images/flag/canadaflag.png')">
+                            <img src="../assets/images/flag/canadaflag.png" alt="Country Flag" class="country-flag">
+                            <span class="country-code">+1</span>
+                        </div>
+                        <!-- Add more dropdown items as needed -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        //Country and Phone Selector New
+        document.addEventListener('click', function (event) {
+            var dropdown = document.getElementById('country-dropdown');
+            if (!dropdown.contains(event.target) && !event.target.closest('.country-selector')) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        function selectCountry(flagSrc, countryName) {
+            document.getElementById('selected-flag').src = flagSrc;
+            document.getElementById('selected-country-name').textContent = countryName;
+            document.getElementById('country-dropdown').style.display = 'none';
+        }
+
+        function toggleDropdown(event) {
+            var dropdown = document.getElementById('country-dropdown');
+            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        }
+
+        document.addEventListener('click', function(event) {
+            var dropdown = document.getElementById('phone-dropdown');
+            if (!dropdown.contains(event.target) && !event.target.closest('.phone-selector')) {
+                dropdown.style.display = 'none';
+            }
+        });
+        
+        function selectPhone(countryCode, flagSrc) {
+            document.getElementById('selected-country-code').textContent = countryCode;
+            document.getElementById('selected-phone-flag').src = flagSrc;
+            document.getElementById('phone-dropdown').style.display = 'none';
+        }
+        
+        function togglePhoneDropdown(event) {
+            var dropdown = document.getElementById('phone-dropdown');
+            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        }
+    </script>
+</body>
+
+</html>

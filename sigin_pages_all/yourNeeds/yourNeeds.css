@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    width: 180px;
+    margin-bottom: 80px;
+}
+
+/* BODY CREATE TRIAL ACCOUNT CSS */
+
+main{
+    width: 100%;
+    height: 100vh;
+}
+
+.main-verify-email {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.main-verify-email h2 {
+    font-weight: 600;
+    color: #000;
+    font-size: 25px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.checkbox-group-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.custom-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.custom-checkbox:checked {
+    background-color: #5dbdf9;
+}
+
+.custom-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+}
+
+.checkbox-group-inner label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.selection-ptag {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.selection-ptag p {
+    font-size: 16px;
+    color: #6C6D6D;
+}
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#skipButton {
+    background-color: #0e0e0e;
+    color: #fff;
+}
+
+#skipButton:hover {
+    background-color: #000;
+    transform: scale(1.05);
+}
+
+#continueButton {
+    background-color: #5dbdf9;
+    color: white;
+    padding: 10px 30px;
+}
+
+#continueButton:hover {
+    background-color: #289ae0;
+    transform: scale(1.05);
+}
+
+#continueButton:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+    padding: 10px 30px;
+}
+
+@media (max-width: 768px) {
+    .main-verify-email {
+        padding: 30px;
+    }
+
+    .logo {
+        width: 150px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 650px) {
+    .main-verify-email h2 {
+        font-size: 22px;
+    }
+
+    .checkbox-group-inner label {
+        font-size: 14px;
+    }
+
+    .selection-ptag p {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .checkbox-group-inner {
+        flex-direction: column;
+        align-items: start;
+        gap: 12px;
+    }
+
+    .logo {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .main-verify-email {
+        padding: 15px;
+    }
+
+    .action-buttons {
+        flex-direction: column-reverse;
+    }
+}

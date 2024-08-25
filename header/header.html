@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icons Import -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Connect With CSS File -->
+    <link rel="stylesheet" href="../header/header.css" />
+
+    <title>TFS Website</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="container-header">
+                <img src="../assets/images/logo.png" alt="Logo" class="logo">
+                <nav class="nav-links">
+                    <a href="#">Platform</a>
+                    <div class="dropdown">
+                        <div class="dropdown-toggle">
+                            <a href="#">Solutions</a>
+                            <i class="ri-arrow-down-s-line icon-arrow-down"></i>
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="#">Solution 1</a>
+                            <a href="#">Solution 2</a>
+                            <a href="#">Solution 3</a>
+                        </div>
+                    </div>
+                    <a href="#">Pricing</a>
+                </nav>
+            </div>
+            <div class="buttons">
+                <button class="btn-signin">sign in</button>
+                <button class="btn-requestademo">request a demo</button>
+            </div>
+            <div class="menu-icon">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        // Header Menu Icon
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdown = document.querySelector('.dropdown');
+            const arrowIcon = document.querySelector('.icon-arrow-down');
+            const navLinks = document.querySelector('.nav-links');
+            const menuIcon = document.querySelector('.menu-icon i');
+
+            dropdownToggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                dropdown.classList.toggle('active');
+                arrowIcon.classList.toggle('active');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove('active');
+                    arrowIcon.classList.remove('active');
+                }
+            });
+
+            // Toggle menu icon for mobile view
+            menuIcon.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+                menuIcon.classList.toggle('ri-close-large-line');
+            });
+
+            // Close dropdown on screen resize
+            window.addEventListener('resize', function () {
+                dropdown.classList.remove('active');
+                arrowIcon.classList.remove('active');
+            });
+
+            // Reset menu icon on screen resize
+            window.addEventListener('resize', function () {
+                // Ensure the menu icon is reset to ri-menu-line when not active
+                if (!navLinks.classList.contains('active')) {
+                    menuIcon.classList.remove('ri-close-large-line');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
